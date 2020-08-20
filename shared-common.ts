@@ -17,3 +17,24 @@ String(path)
     return acc
   }, value)
 
+/** Converts a string or DateObj */
+export function convertToIso(date: string | Date) {
+  if (date) {
+    try {
+      const dateVal: Date = new Date(date)
+        , yyyy: any = dateVal.getFullYear()
+      let dd: any = dateVal.getDate()
+        , mm: any = dateVal.getMonth() + 1
+
+      if (dd < 10) dd = `0${dd}`
+      if (mm < 10) mm = `0${mm}`
+
+      return `${yyyy}-${mm}-${dd}T00:00:00.000Z`
+    }
+    catch (err) {
+      console.error('convertToIso.Err: ', err)
+    }
+  }
+  return date
+}
+
