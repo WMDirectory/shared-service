@@ -1,6 +1,5 @@
 /** Common interfaces */
 /** This will contain all DB related interfaces */
-import { Document } from 'mongoose'
 
 export interface Contact extends Relation {
     firstname: string,
