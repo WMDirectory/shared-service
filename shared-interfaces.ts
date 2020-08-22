@@ -128,6 +128,8 @@ export interface PostingPayload {
     logoid: string
     /** File ID */
     bgimgid: string
+    /** Same as Contact.contactdetails */
+    contactdetails?: ContactDetail[]
 }
 
 export interface FileDB {
