@@ -112,14 +112,22 @@ export interface PostingPayload {
     expiry?: string
     title: string
     description?: string
+    /** Lookup IDs */
     categoryids: string[]
+    /** Lookup IDs */
     stateids: string[]
     area: string
     productids?: string[]
-    contactdetails?: ContactDetail[]
-    attachmentIds?: string[]
+    /** Contact ID */
     companyid: string
+    /** Contact ID */
     contactid: string
+    /** File IDs */
+    attachmentids?: string[]
+    /** File ID */
+    logoid: string
+    /** File ID */
+    bgimgid: string
 }
 
 export interface FileDB {
