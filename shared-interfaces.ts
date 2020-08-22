@@ -138,23 +138,23 @@ export interface ContactDetail {
 
 export interface ContactDB {
     /** TODO: Add _id property */
-    firstname: string,
-    lastname?: string,
-    type: number,
-    address?: string,
-    phones?: string[],
-    emails?: string[],
+    firstname: string
+    lastname?: string
+    type: number
+    address?: string
+    phones?: string[]
+    emails?: string[]
     contactdetails?: ContactDetail[]
     /** Stores the fileId for the profile pic */
-    profilepic?: FileDB,
+    profilepic?: FileDB
     /** Stores array of contactIds with name */
-    contacts?: ContactDB[],
+    contacts?: ContactDB[]
     cts: string
 }
 
 export interface ContactPayload {
-    firstname: string,
-    lastname?: string,
+    firstname: string
+    lastname?: string
     /**
      * Type will determine which contact data is this
      * type: 0 - Testing
@@ -162,13 +162,13 @@ export interface ContactPayload {
      * type: 2 - Customer/Contact
      * type: 3 - Company
      */
-    type: number,
-    address?: string,
-    phones?: string[],
-    emails?: string[],
+    type: number
+    address?: string
+    phones?: string[]
+    emails?: string[]
     contactdetails?: ContactDetail[]
     /** File ID */
-    profilepic?: string,
+    profilepic?: string
     contactids?: string[]
 }
 
