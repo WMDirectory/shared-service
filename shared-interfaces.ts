@@ -98,6 +98,7 @@ export interface PostingDB {
     states: LookupDB[]
     area: string
     products?: RegularRel[]
+    contactdetails?: ContactDetail[]
     attachments?: FileDB[]
     logo: FileDB
     bgimg: FileDB
@@ -115,6 +116,7 @@ export interface PostingPayload {
     stateids: string[]
     area: string
     productids?: string[]
+    contactdetails?: ContactDetail[]
     attachmentIds?: string[]
     companyid: string
     contactid: string
@@ -129,6 +131,11 @@ export interface FileDB {
     cts: string
 }
 
+export interface ContactDetail {
+    text: string,
+    type: number
+}
+
 export interface ContactDB {
     /** TODO: Add _id property */
     firstname: string,
@@ -137,6 +144,7 @@ export interface ContactDB {
     address?: string,
     phones?: string[],
     emails?: string[],
+    contactdetails?: ContactDetail[]
     /** Stores the fileId for the profile pic */
     profilepic?: FileDB,
     /** Stores array of contactIds with name */
@@ -158,6 +166,7 @@ export interface ContactPayload {
     address?: string,
     phones?: string[],
     emails?: string[],
+    contactdetails?: ContactDetail[]
     /** File ID */
     profilepic?: string,
     contactids?: string[]
