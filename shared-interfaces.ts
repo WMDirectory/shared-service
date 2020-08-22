@@ -99,6 +99,8 @@ export interface PostingDB {
     area: string
     products?: RegularRel[]
     attachments?: FileDB[]
+    logo: FileDB
+    bgImg: FileDB
     company: ContactDB
     contact: ContactDB
     cts: string
