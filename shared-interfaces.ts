@@ -100,7 +100,7 @@ export interface PostingDB {
     products?: RegularRel[]
     attachments?: FileDB[]
     logo: FileDB
-    bgImg: FileDB
+    bgimg: FileDB
     company: ContactDB
     contact: ContactDB
     cts: string
