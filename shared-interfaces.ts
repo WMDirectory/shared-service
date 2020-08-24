@@ -102,6 +102,7 @@ export interface PostingDB {
     attachments?: FileDB[]
     logo: FileDB
     bgimg: FileDB
+    ratings: number
     company: ContactDB
     contact: ContactDB
     cts: string
@@ -130,6 +131,8 @@ export interface PostingPayload {
     bgimgid: string
     /** Same as Contact.contactdetails */
     contactdetails?: ContactDetail[]
+    /** Rating is required */
+    ratings: number
 }
 
 export interface FileDB {
