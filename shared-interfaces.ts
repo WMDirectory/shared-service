@@ -55,13 +55,16 @@ export interface LookupDB {
      * 3: status,
      */
     type: number
+    /** The bigger the weight the higher its priority */
+    weight: number
     cts: string
 }
 
 export interface LookupPayload {
-    name: string,
-    code: string,
-    attachments: string[],
+    name: string
+    code: string
+    attachments: string[]
+    weight: number
     /**
      * 0: testing,
      * 1: states,
