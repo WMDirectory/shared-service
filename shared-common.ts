@@ -38,3 +38,19 @@ export function convertToIso(date: string | Date) {
   return date
 }
 
+/**
+ * Sorts array based on the single key that you provide
+ * @param arrObj array of objects to be sorted
+ * @param sortKey key for sorting
+ * @param isDesc boolean for descending
+ */
+export function sortArrObj(arrObj: any[], sortKey?: string, isDesc?: boolean) {
+  return arrObj.sort((a, b) => {
+      let _A = a, _B = b
+      if (sortKey) { _A = a[sortKey]; _B = b[sortKey] }
+      const dir = _A < _B ? 1 : ((_B < _A) ? -1 : 0)
+      if (isDesc) { return dir }
+      return -dir
+  })
+}
+
