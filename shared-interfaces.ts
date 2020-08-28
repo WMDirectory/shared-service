@@ -149,6 +149,17 @@ export interface FileDB {
 
 export interface ContactDetail {
     text: string,
+    /**
+     * Type number will represent the following:
+     * * 0 - Testing
+     * * 1 - Phone
+     * * 2 - Email
+     * * 3 - Twitter
+     * * 4 - Instagram
+     * * 5 - Facebook
+     * * 6 - Website
+     * * 7 - Others
+     */
     type: number
 }
 
