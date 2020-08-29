@@ -54,3 +54,32 @@ export function sortArrObj(arrObj: any[], sortKey?: string, isDesc?: boolean) {
   })
 }
 
+/**
+ * Yes
+ */
+export function simulateKey(element: HTMLElement, keycode?: string) {
+  const keyboardEvent = new KeyboardEvent('keydown', {code: 'Tab', key: 'Tab', keyCode: 9} as any)
+  // element.dispatchEvent(e)
+
+  /** Attempt #2 */
+  // const keyboardEvent = new KeyboardEvent('keydown')
+
+  // const initMethod = typeof keyboardEvent[`initKeyboardEvent`] !== 'undefined' ? 'initKeyboardEvent' : 'initKeyEvent'
+
+  // keyboardEvent[initMethod](
+  //   'keydown', // event type : keydown, keyup, keypress
+  //   true, // bubbles
+  //   true, // cancelable
+  //   window, // viewArg: should be window
+  //   false, // ctrlKeyArg
+  //   false, // altKeyArg
+  //   false, // shiftKeyArg
+  //   false, // metaKeyArg
+  //   9, // keyCodeArg : unsigned long the virtual key code, else 0
+  //   0 // charCodeArgs : unsigned long the Unicode character associated with the depressed key, else 0
+  // )
+  // keyboardEvent[`keyCodeVal`] = 9
+
+  element.dispatchEvent(keyboardEvent)
+}
+
