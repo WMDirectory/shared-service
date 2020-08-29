@@ -6,16 +6,16 @@
  * Stolen from https://gist.github.com/jeneg/9767afdcca45601ea44930ea03e0febf#gistcomment-3159161
  */
 export const get = (value: any, path: string, defaultValue: any) =>
-String(path)
-  .split('.')
-  .reduce((acc, v) => {
-    try {
-      acc = acc[v] === undefined ? defaultValue : acc[v]
-    } catch (e) {
-      return defaultValue
-    }
-    return acc
-  }, value)
+  String(path)
+    .split('.')
+    .reduce((acc, v) => {
+      try {
+        acc = acc[v] === undefined ? defaultValue : acc[v]
+      } catch (e) {
+        return defaultValue
+      }
+      return acc
+    }, value)
 
 /** Converts a string or DateObj to GMT+0 without time value */
 export function convertToGMT(date: string | Date) {
@@ -46,11 +46,11 @@ export function convertToGMT(date: string | Date) {
  */
 export function sortArrObj(arrObj: any[], sortKey?: string, isDesc?: boolean) {
   return arrObj.sort((a, b) => {
-      let _A = a, _B = b
-      if (sortKey) { _A = a[sortKey]; _B = b[sortKey] }
-      const dir = _A < _B ? 1 : ((_B < _A) ? -1 : 0)
-      if (isDesc) { return dir }
-      return -dir
+    let _A = a, _B = b
+    if (sortKey) { _A = a[sortKey]; _B = b[sortKey] }
+    const dir = _A < _B ? 1 : ((_B < _A) ? -1 : 0)
+    if (isDesc) { return dir }
+    return -dir
   })
 }
 
